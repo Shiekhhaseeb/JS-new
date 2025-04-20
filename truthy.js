@@ -22,7 +22,7 @@ if (Object.keys(emptyObj).length === 0) {
   console.log("Object is empty");
 }
 //Nullish coalescing operator (??) :null,undefined
-
+//to AVOID Null/undefined values to add flags
 // let val1=5 ?? 10;
 /*********************** */
 // console.log(val1);
