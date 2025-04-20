@@ -12,7 +12,7 @@ let age =18;  //number
 let isLoggedIn=true;//boolean => true or false
 
 //1.number=> 2 to the power 53
-//2.bifint
+//2.bigint
 //3.string
 //4.Boolean
 //5.null
