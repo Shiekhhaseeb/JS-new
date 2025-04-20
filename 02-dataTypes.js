@@ -19,8 +19,8 @@ let isLoggedIn=true;//boolean => true or false
 //6.undefined
 //7.Symbol:-used to check uniquesness used in react
 console.log(typeof "Haseeb")
-console.log(typeof age);
-console.log(typeof null);
-console.log(typeof undefined);
+console.log(typeof age);//string
+console.log(typeof null);//object
+console.log(typeof undefined);//undefined
 
 
