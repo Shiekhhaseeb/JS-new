@@ -32,7 +32,7 @@
 //     break;
 // }
 const month = 'march'; //key=month
-switch (month) {
+switch (month) {        //key=month
   case 'jan':
     console.log("January");
     break;
