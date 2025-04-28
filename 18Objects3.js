@@ -66,5 +66,5 @@ console.log(instructor);
 //JSON :-js object notation
 //goole --> famous APi =Random user me
 
-//go to JSON fromatter
+//go to JSON fromatter  
 
