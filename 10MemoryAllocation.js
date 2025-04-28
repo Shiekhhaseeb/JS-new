@@ -16,7 +16,7 @@ email:'userone@google.com',
 upi:'user@ybl'
 }
 
-let userTwo=userOne
+let userTwo=userOne;
 
 userTwo.email='user2@google.com'
 console.log(userOne.email);
