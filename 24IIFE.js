@@ -40,6 +40,7 @@
     
 })
 ();//(;) semicolon is necessary here
+
 ( (name) => { //UNnamed iffe
     
     console.log(`DB Connected 2 ${name}`);
