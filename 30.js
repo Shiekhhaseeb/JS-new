@@ -1,3 +1,7 @@
+/**forEach() is used to iterate over an array and execute a function for each element.
+
+It does not return anything useful — specifically, it always returns undefined. */
+/*********************************** */
 // const coding=["js","ruby","java","python","cpp"]
 
 // const values =coding.forEach((item) =>{
@@ -5,7 +9,9 @@
 //     console.log(item);
 
 // })
-// console.log(values);
+// console.log(values);//undefined
+
+//output-->
 /**js
 ruby
 java
@@ -21,7 +27,7 @@ undefined */
 //     // console.log(item);
 //     return item;
 // })
-// console.log(values);
+// console.log(values);//undefined
 /**js
 ruby
 java
@@ -50,7 +56,6 @@ undefined */
 /******************************************* */
 /***Doing same using .forEach() */
 // const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
 // const newNums = [];
 // myNums.forEach((num) => {
 //   if (num > 4) {
@@ -72,8 +77,8 @@ const books = [
     { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
   ];
 
-let userBooks =books.filter((bk)=>bk.genre==='History')//each book bk
-console.log(userBooks);
+// let userBooks =books.filter((bk)=>bk.genre==='History')//each book bk
+// console.log(userBooks);// 2 books aayi
 /** output:--->[
   {
     title: 'Book Three',
@@ -90,11 +95,11 @@ console.log(userBooks);
 ] */
 /************** */
 //books published in >=2000 is ke bad
-// userBooks=books.filter((bk) => {return bk.publish >= 2000})//{scope{}} is impt. here to print
+// userBooks=books.filter((bk) => {return bk.publish >= 2000});//{scope{}} is impt. here to print
 //or
-// userBooks=books.filter((bk) =>  bk.genre >= 2000)
+userBooks=books.filter((bk) =>  bk.genre >= 2000)
 
-// console.log(userBooks);
+console.log(userBooks);
 //output:--->
 /*[
   {
@@ -134,8 +139,10 @@ console.log(userBooks);
 // console.log(userBooks);
 /****************** */
 //2005 se zyada wali books
-userBooks=books.filter((bk) => {
-    return bk.publish >= 2005
-})
+// userBooks=books.filter((bk) => {
+//     return bk.publish >= 2005
+// })
 
-console.log(userBooks);
+// console.log(userBooks);
+
+
