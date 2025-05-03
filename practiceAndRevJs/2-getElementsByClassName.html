@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByClassName2()</title>
+</head>
+<body>
+       <!-- 📌 2. getElementsByClassName("className") -->
+    <!-- 🔵 Gets MANY elements with the same class
+    👕 Like calling all students wearing blue uniforms -->
+    <p class="note1">Note 1</p>
+    <p class="note">Note 2</p>
+    <p class="note">Note 3</p>
+    <p class="note">Note 4</p>
+    <p class="note">Note 5</p>
+    <p class="note">Note 6</p>
+
+    <script>
+        // If you want to target the one with class "note1":
+        const note1 =document.getElementsByClassName("note1");
+        note1[0].style.color ="brown";
+        note1[0].style.backgroundColor ="pink";
+        note1[0].style.display = "inline";//ek he
+        /*In HTML, by default, a <p> (paragraph) element behaves like a block-level element. This means it takes up the full width of its container (usually the body of the webpage) unless otherwise specified. So when you add a background color, it might cover the whole width of the page.*/ 
+
+/*An HTMLCollection is similar to an array, but it's not exactly the same. It contains a list of elements(key-value pair), and you can access each element in it using indexing (like an array), which is why note1[0] looks like it's an array.
+
+However, it's not a true JavaScript array. It's more like a list of elements.*/
+
+const notes =document.getElementsByClassName("note");
+console.log(notes);
+
+for (let i = 0; i < notes.length; i++) {
+notes[i].style.color ="green"   ;
+}
+    </script>
+</body>
+</html>

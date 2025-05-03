@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+    <style>
+        
+    </style>
+  </head>
+  <body>
+    <!-- 📌 1. getElementById("idName")
+    🟢 Gets ONE specific element using its ID
+    📛 Like calling one student by their name tag -->
+    <h1 id="title"><marquee >Hello,World</marquee></h1>
+    <script>
+      const element = document.getElementById("title");
+      console.log(element);
+      element.style.color = "blue";
+      element.style.backgroundColor = "pink";
+      element.style.borderRadius="10PX"
+    </script>
+  </body>
+</html>

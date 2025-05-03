@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerText VS textContent</title>
+</head>
+<body>
+    
+    <div id="demo">
+        Hello
+        <span style="display: none;">Secret</span>
+    </div>
+    <script>
+        const element=document.getElementById("demo")
+        console.log(element.innerText); // → "Hello"
+        element.style.color ="pink"
+        element.style.backgroundColor="yellow"
+        console.log(element.textContent);// → "HelloSecret"
+
+//So if you don’t want the "Secret" part, innerText is better!
+
+/*🧑‍🏫 Final Professor’s Advice:
+| Want only what the user sees? → Use ✅ innerText
+
+| Want everything in the element? → Use 🧠 textContent,hidden elements also visible */
+
+/*✅ 🔑 Short & Powerful Answer:
+.innerText returns the visible text of an element (what you actually see on the screen), while .textContent returns all the text, including hidden content and extra spaces, regardless of styles like display: none.
+
+🧠 Detailed Comparison (if they ask for more):
+Feature	.innerText	.textContent
+Shows hidden text?	❌ No (ignores hidden elements)	✅ Yes (includes hidden elements)
+Includes formatting?	✅ Respects line breaks and spacing	❌ Doesn't format, just raw text
+Affected by CSS?	✅ Yes (only shows visible parts)	❌ No (ignores styles)
+Performance	⛔ Slightly slower (calculates layout)	✅ Faster (just grabs the text)
+Use case	When you want what the user sees	When you want all content inside*/
+
+/*🎯 Why Does It Matter for .innerText vs .textContent?
+When you hide an element using display: none, JavaScript knows it’s there, but .innerText ignores it because it only grabs what the user can see. However, .textContent will still grab it because it doesn’t care about whether the text is visible or not. It just grabs all the text, hidden or visible.*/
+        
+    </script>
+</body>
+</html>

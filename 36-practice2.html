@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="playground">
+        <div id="parent">
+        <button id="child">Click Me</button>
+    </div>
+    </div>
+    <!-- It’s like:
+
+    A playground (biggest)
+    
+    A parent inside the playground
+    
+    A button (child) inside the parent
+    
+    So: Child is inside Parent, and Parent is inside Playground -->
+    <script>
+//         1️⃣ Event Bubbling (Bottom ➡️ Up)
+// 🧒 Imagine the button is a kid who drops a toy.
+
+// The toy bounces up to the parent… then to the playground.
+
+// In JavaScript:
+
+// You click the button
+
+// Event goes to the parent
+
+// Then to the playground
+
+// ➡️ This is called bubbling, because the event bubbles up.
+
+// Code example:
+/************************/
+// document.getElementById('playground').addEventListener('click',function(e){
+//     console.log("playground clicked");
+    
+// },false); //👈EventBubbling (false) by default false
+// document.getElementById('parent').addEventListener('click',function(e){
+//     console.log("parent clicked");
+    
+// });
+// document.getElementById('child').addEventListener('click',function(e){
+//     console.log("child clicked");
+    
+// });
+//output:-->
+/*child clicked
+ parent clicked
+ playground clicked*/
+/***************************************/
+document.getElementById('playground').addEventListener('click',function(e){
+    console.log("playground clicked");
+    
+},true); // 👈 capture mode
+document.getElementById('parent').addEventListener('click',function(e){
+    console.log("parent clicked");
+    
+},true);
+document.getElementById('child').addEventListener('click',function(e){
+    console.log("child clicked");
+    
+},true);
+//output:-->
+
+/*playground clicked
+ parent clicked
+ child clicked*/
+ /*🧠 Summary (Simple Table)
+Propagation  Type	Direction	 Feels Like	Code  Option
+Bubbling  	Child➡️  Parent	Toy  bouncing up 🧸	 Default behavior
+Capturing	Parent➡️ Child	Ball coming down 🏀	 { capture: true }*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3Document</title>
+  </head>
+  <body>
+    <p>This is para 1</p>
+    <p>This is para 2</p>
+    <p>This is para 3</p>
+
+    <script>
+      const paragraphs = document.getElementsByTagName("p");
+      console.log(paragraphs); // HTMLCollection of all <p> elements
+
+      paragraphs[0].style.fontWeight = "bold";
+      paragraphs[1].style.fontStyle = "italic";
+
+      paragraphs[0].style.color = "white";
+      paragraphs[0].style.backgroundColor = "purple";
+
+      paragraphs[1].style.color = "white";
+      paragraphs[1].style.backgroundColor = "#212121";
+
+      paragraphs[2].style.color = "white";
+      paragraphs[2].style.backgroundColor = "#212121";
+      paragraphs[2].style.display = "inline";
+
+
+    </script>
+    <!-- 🧠 Think of your webpage like a school building.
+    Inside this building (your HTML page), there are rooms (like <p> tags, <div>, buttons, images, etc.).
+    
+    Now, when you want to find something inside the building, like "all the paragraphs (<p>) on the page," you need to start from somewhere.
+    
+    💡 That “somewhere” is document
+    document is like the principal's office that knows everything in the school (the webpage).
+    
+    It can see and control every room (every element) in the building. -->
+    <!-- window.document.getElementsByTagName('p'); -->
+
+    <!-- 0000000111111111111111111111111111111111111 -->
+
+    <!-- 🧠 Breaking it down:
+window = the big browser window (like the whole screen)
+
+document = the web page inside that window (the book)
+
+getElementsByTagName('p') = find all the tags that are <p> (paragraphs)
+
+const paragraphs = ... = save all of those paragraphs in a box called paragraphs -->
+  </body>
+</html>

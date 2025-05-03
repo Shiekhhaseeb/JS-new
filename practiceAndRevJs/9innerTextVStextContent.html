@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>innerTextVStextContent</title>
+  </head>
+  <body>
+    <div id="first">First Element</div>
+
+    <div id="second">
+      Second Element
+      <span class="hide">Element</span>
+    </div>
+
+    <script>
+       const fir = document.getElementById("first");
+       const sec = document.getElementById("second");
+
+      console.log(`innerText : "${fir.innerText}"`);
+     console.log(`textContent : "${fir.textContent}"`);
+
+     console.log("ye log hai");
+     
+     console.log(`innerText : "${sec.innerText}"`);
+     console.log(`textContent : "${sec.textContent}"`);
+     /*innerText : "First Element"
+textContent : "First Element"
+
+innerText : "Second Element Element",ye wala space nahi lega
+textContent : "    hidden elements bhi milenge yaha+ spaces
+      Second Element
+      Element"
+*/
+//inneText is better than textContent
+    </script>
+  </body>
+</html>

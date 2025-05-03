@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>htnml Events</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing image</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop" />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="" />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="" />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="" />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="" />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+    <script>
+      //✅ Approach 1: Inline Event
+      // put this inside the html tag
+      //onclick="alert('owl')";
+      // This caused problem while scaling apps
+      // This is not a good approach
+      // Don't inject tags in html
+      // React has different scenario than this
+      /**********************************************/
+      //✅ Approach 2: Using HTML DOM Property
+      // document.getElementById('owl').onclick =function(){
+      //     alert('owl clicked2');
+      // }
+      //This is also not good approach
+      //This gives less features
+      //EventListener gives propagational ability
+      /**********************************************/
+      //✅ Approach 3: Using addEventListener (Best Way)
+      //  document.getElementById('owl').addEventListener("click",function(){
+
+      //     alert('owl clicked again')
+      //  },false)//by default its false
+
+      /******************************************************/
+      // document.getElementById('owl').addEventListener("click",function(e){
+
+      // alert(e);
+
+      // },false)
+      /******************************************************/
+      //This box is outside the function, so it’s global — meaning we can use it anywhere.
+
+      //     let lastEvent; // global variable
+      // /*🖱️ Then, when you click the owl image...
+      // The browser sends us a message (we call it e — it’s short for event).*/
+      //     document.getElementById('owl').addEventListener("click", function(e){
+      //         lastEvent = e; // save event object to use in console
+      //         //"Take all that click info and store it inside my box called lastEvent."
+      //         console.log("Click registered. Now type `lastEvent` in the console to inspect the event.");
+      //     }, false);
+
+      /*🧠 Summary
+Code	What it means in plain English
+let lastEvent;	"Make an empty box called lastEvent."
+lastEvent = e;	"Store the click info inside the box."
+Use in console	"Let me open the box and see what’s inside!"*/
+      //There are 2 types of events :-->
+      // 1.Browser events
+      // 2.Environment
+
+      /*******************************************/
+      //🏀 What Is Event Propagation?
+      //1️⃣ Event Bubbling (Bottom ➡️ Up)
+
+      // document.getElementById('images').addEventListener("click",function(e){
+
+      // console.log("Clicked inside ul");
+
+      // },false)
+
+      // document.getElementById('owl').addEventListener("click",function(e){
+
+      // console.log(" Owl Clicked");
+
+      // },false)
+      //output:--> Owl Clicked
+      //          Clicked inside ul
+      /******************************************************/
+      //2️⃣ Event Capturing (Top ➡️ Down)
+      // document.getElementById('images').addEventListener("click",function(e){
+
+      // console.log("Clicked inside ul");
+
+      // },true)
+
+      // document.getElementById('owl').addEventListener("click",function(e){
+
+      // console.log(" Owl Clicked");
+
+      // },true)
+      //output:--> Clicked inside ul
+      //           Owl Clicked
+      //
+      /***************************************************/
+
+      //To avoid sometimes bubbling in react we use StopPropagation()
+      // document.getElementById('images').addEventListener("click",function(e){
+
+      // console.log("Clicked inside ul");
+
+      // },false)
+
+      // document.getElementById('owl').addEventListener("click",function(e){
+
+      // console.log(" Owl Clicked");
+      //  e.stopPropagation()//👈 To avoid EventBubbling here
+
+      // },false)
+      //output :-->Owl Clicked"
+      //event bubble hoke upar ke element pe nahi jayega
+
+      /*************************************/
+      // document.getElementById('images').addEventListener("click",function(e){
+
+      // console.log("Clicked inside ul");
+
+      // },false)
+
+      // document.getElementById('owl').addEventListener("click",function(e){
+
+      // console.log(" Owl Clicked");
+      //  e.stopPropagation()//👈 To avoid EventBubbling here
+
+      // },false)
+
+      // document.getElementById('google').addEventListener("click",function(e){
+      // console.log("google clicked");
+      //  e.preventDefault()//👈 preventDefault like stopPropagation()
+      // e.stopPropagation()//avoids bubbling,only google clicked is displayed
+      // },false)
+      /***********************************/
+      //click karne par images gayab hojaye:-->
+
+      document.querySelector("#images").addEventListener(
+        "click",
+        function (e) {
+          console.log(e);
+          console.log(e.target);
+          console.log(e.target.parentNode);//hume pra li remove karna hai na ke sirf image 
+          //to remove image:-->
+          //1st approach:
+          let removeIt =e.target.parentNode;//gives li
+          removeIt.remove();
+//2nd approach:-
+// let removeIt =e.target.parentNode;
+// removeIt.parentNode.removeChild(removeIt)
+//problem ,when i click li(all get deleted)
+
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

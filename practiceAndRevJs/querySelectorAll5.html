@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✅ 5. querySelectorAll()</title>
+  </head>
+  <body>
+    <!-- 🧠 Used to get all elements matching a CSS selector.SAB PAR CSS APPLY HOGA -->
+
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+
+    <script>
+      const boxes = document.querySelectorAll(".box");
+      console.log(boxes); // <div class="box">Box 1</div>
+
+      for (let i = 0; i < boxes.length; i++) {
+        boxes[i].style.color = "purple";
+        boxes[i].style.backgroundColor = "yellow";
+        boxes[i].style.borderRadius = "5px";
+        boxes[i].style.border = "2px solid black";
+        boxes[i].style.display="inline";//1 he line me aayenge done ,avoids it to take full space
+
+       
+      }
+
+      //NOTE:--> When you use display: none in JavaScript, it hides the element on the page.
+      //boxes[i].style.display = "none";
+
+      //To change each element separately
+      //   boxes[0].style.color = "purple";
+      //   boxes[0].style.backgroundColor = "yellow";
+      //   boxes[0].style.borderRadius = "5px";
+      //   boxes[0].style.border = "2px solid black";
+    </script>
+  </body>
+</html>
+<!-- 🧠 Summary for You:
+Method	Returns	Grabs
+getElementById	Single element	By ID (#)
+getElementsByClassName	Collection	By class (.)
+getElementsByTagName	Collection	By tag name (p, div)
+querySelector	First match	Any CSS selector
+querySelectorAll	All matches (NodeList)	Any CSS selector -->

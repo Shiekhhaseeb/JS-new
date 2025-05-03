@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.2</title>
+  </head>
+  <body>
+    <p class="note">First Note</p>
+    <p class="note">Second Note</p>
+    <p class="note">Third Note</p>
+  </body>
+  <script>
+const notes = document.getElementsByClassName("note");  // HTMLCollection
+console.log(notes);  // HTMLCollection [p.note, p.note, p.note]
+
+notes[0].style.color = "brown";  // This changes the first note to brown!
+
+// Now let's compare it to an actual array
+const fruits = ["Apple", "Banana", "Orange"];
+console.log(fruits);  // ["Apple", "Banana", "Orange"]
+
+fruits[0] = "Mango";  // Change the first element of the array
+console.log(fruits);  // ["Mango", "Banana", "Orange"]
+
+    
+  </script>
+</html>

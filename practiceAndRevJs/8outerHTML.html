@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8-outerHTML</title>
+  </head>
+  <body>
+    <p id="demo">Hello <b>world</b></p>
+    <script>
+      const paragraph = document.getElementById("demo");
+      console.log(paragraph);
+      console.log(paragraph.outerHTML); // // "Hello <b>World</b>"
+
+      paragraph.outerHTML = "This is new text added <i>outerHtml</i>";
+      /*In this example:
+
+outerHTML returns the whole HTML: "<p id="demo">Hello <b>World</b></p>".
+
+If you set outerHTML, it replaces the entire element with the new HTML (e.g., <div>New content with <b>HTML</b>!</div>).*/
+    </script>
+  </body>
+</html>

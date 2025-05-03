@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7innerText</title>
+</head>
+<body>
+    <p id="demo">Hello <b>world</b></p>
+
+    <script>
+const paragraph=document.getElementById("demo")
+console.log(paragraph);
+console.log(paragraph.innerText);  // "Hello World" (shows visible text)
+paragraph.innerText="This is the innerText"
+   
+/*In this example: innerText()
+
+innerText returns only the visible text: "Hello World". It doesn’t include HTML tags (like <b>).
+
+If you set innerText, it changes the text but not the HTML structure.*/
+    </script>
+</body>
+</html>

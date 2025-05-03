@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent</title>
+</head>
+<body>
+    <p id="demo">Hello <b>world</b></p>
+
+    <script>
+const paragraph=document.getElementById("demo")
+console.log(paragraph);
+console.log(paragraph.textContent); // "Hello World"
+paragraph.textContent="This is new text added"//This text will be displayed
+
+/*What it does:textContent
+
+It gets or sets the text inside an element.
+
+It does not include HTML tags inside the element; it only gets or changes the text content.*/
+    </script>
+</body>
+</html>

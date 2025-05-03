@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>innerHTML</title>
+  </head>
+  <body>
+    <p id="demo">Hello <b>world</b></p>
+    <script>
+        const paragraph=document.getElementById("demo")
+          console.log(paragraph);
+          console.log(paragraph.innerHTML);// // "Hello <b>World</b>"
+
+          paragraph.innerHTML="This is new text added <i>innerHtml</i>"//This is new text added innerHtml
+
+/*************************/
+
+          /*In this example:
+
+innerHTML returns the HTML content: "Hello <b>World</b>" (with the <b> tag).
+
+If you set innerHTML, you can add HTML elements like <i>, <b>, etc.*/
+
+      /*What it does:innerHTML
+
+It gets or sets the HTML content inside an element, including tags (like <b>, <a>, etc.).
+
+You can insert HTML with innerHTML, not just text.*/
+    </script>
+  </body>
+</html>
