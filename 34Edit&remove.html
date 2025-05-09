@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>edit and remove()</title>
+  </head>
+  <body>
+    <ul class="language">
+      <li>JavaScript</li>
+    </ul>
+
+    <script>
+      function addlanguage(langName) {
+        const li = document.createElement("li");
+        li.innerHTML = `${langName}`;
+
+        const ul=document.querySelector(".language");
+        ul.appendChild(li);
+        //or
+        //     document.querySelector('.language').appendChild(li)
+      }
+      addlanguage("python");
+      addlanguage("ts");
+// But there is problem in this method we have to traverese full Tree
+//in doc thus we use optimized method(using DSA b.t.s)
+
+    </script>
+  </body>
+</html>
