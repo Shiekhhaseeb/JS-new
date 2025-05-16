@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XHR(xml http request)</title>
+  </head>
+  <body>
+    <script src="4.2.js"> 
+      // XHR(xml http request)
+      // json is same as js onject
+      //in json(js object notation) "" is necessary
+      //methods r not used
+      //   const URL = "https://jsonplaceholder.typicode.com/posts";
+      //   const xhr = new XMLHttpRequest();
+      //   // console.log(xhr);
+      //   //step1 :--   req.,where to send request use open
+      // //   console.log(xhr.readyState);//open karne se pehle ready state 0
+      //   xhr.open("GET", URL);
+      // //   console.log(xhr.readyState);//open ke bad ready state
+      //   xhr.onreadystatechange = function () {
+      //     // console.log(xhr);//this is done by browser in background
+      //     // console.log(xhr.readyState);
+      //     //check ready state mdn xhr
+      //     if (xhr.readyState ===4) {
+      //             // console.log(xhr);
+      //             // console.log(xhr.response); {me o/p}
+      //             // console.log(typeof xhr.response);//string,thus convert it into Object (JSON)
+      //             const response = xhr.response;
+      //             const data = JSON.parse(response)
+      //             console.log(typeof data);
+
+      //             //console>Fetch/XHR
+      //             // he>post>Response>Headers>RequestURL
+      //              //list of HTTP status coded
+      //              //1xx,2xx,3xx,4xx,5xx: wikipedia
+
+      //     }
+      //   };
+      //   xhr.send();
+
+      /********if we write wrong url : error 404****************/
+    //   const URL = "https://jsonplaceholder.typicode.com/posts";
+    //   const xhr = new XMLHttpRequest();
+
+    //   xhr.open("GET", URL);
+      //ye method tabl chalega jab bhi state change hogi
+      //   xhr.onreadystatechange = function () {
+
+      //     if (xhr.readyState ===4) {
+
+      //             // const response = xhr.response;
+      // const data = JSON.parse(response)
+      // console.log(typeof data);
+
+      //     }
+      //   };
+    //   xhr.onload = function () {
+    //     //this will run whhen ready state is 4
+    //     const response = xhr.response;
+    //     const data = JSON.parse(response);//object me change hua data
+    //     console.log(data);
+    //   };
+    //   xhr.send();
+    </script>
+  </body>
+</html>

@@ -1,4 +1,5 @@
-// //Object literals
+// //Object literals:- 
+
 // const user ={
 //     username: "John",
 //     loginCount:8,
