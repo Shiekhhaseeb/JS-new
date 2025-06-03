@@ -5,6 +5,8 @@
 
 /************* */
 //difference b/w let,const and var
+//VLC(HH,NH,NN)
+//  (FXN ,BLOCK,BLOCK)SCOPE
 //1.var:-->hoga,hoga
 
 //a.Redeclaration
@@ -20,11 +22,11 @@
 
 //2.let
 
-//a.Redeclaration(nahi,hoga)
+// a.Redeclaration(nahi,hoga)
 // let a=10;
 // let a=20;
 // console.log(a);
-//b.Reassignment
+// b.Reassignment
 // let a=10;
 //    a=20;
 // console.log(a);
