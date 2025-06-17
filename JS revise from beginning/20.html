@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="outer" style="padding: 30px; background: lightblue">
+      Outer Div
+      <div id="inner" style="padding: 30px; background: lightgreen">
+        Inner Div
+        <button id="btn">Click Me</button>
+      </div>
+    </div>
+    <script>
+      //Bubbling (default-false)
+      document.getElementById("outer").addEventListener(
+        "click",
+        function () {
+          console.log("Outer Div Clicked-Bubbling");
+        },
+        false
+      );
+
+      document.getElementById("outer").addEventListener(
+        "click",
+        function () {
+          console.log("Inner Clicked-Bubbling");
+        },
+        false
+      );
+
+      // Capturing (pass true as third parameter)
+      document.getElementById("outer").addEventListener(
+        "click",
+        function () {
+          console.log("Outer Div Clicked - Capturing");
+        },
+        true // this means it listens in **capturing phase**
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.Blocking code(Synchronous code)line by line exe hoga
+      //Means one thing runs at a time. Next line waits till the current line is done.
+      console.log("Start");
+      for (let i = 0; i < 1000000000; i++) {}
+      console.log("End");
+
+      //2. Non-Blocking Code (Asynchronous)
+      //Some tasks (like timers, API calls) don’t block the next lines.
+      console.log("Start");
+
+      setTimeout(()=>{
+        console.log("After 2 secs");
+        
+      },2000)
+      console.log("End");
+
+    //   setTimeout(()=>{},2000)
+    </script>
+  </body>
+</html>
