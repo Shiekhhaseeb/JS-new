@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1.setTimeout() : this is an e.g of Async JS
+
+      //   setTimeout(()=>{
+      //     console.log("This runs after 3 seconds");
+      //   },3000)
+      //How to Stop setTimeout()?
+    //   const timeOut = setTimeout(() => {
+    //     console.log("This runs after 3 seconds");
+    //   }, 3000);
+    //   clearTimeout(timeOut); //cncels the above timeout
+    /*************************************/
+
+      //2.setInterval() – Runs repeatedly after interval
+      const intervalId=setInterval(()=>{
+        console.log("This will run after each 2s");
+      },2000)
+      //How to Stop setInterval()?
+      clearInterval(intervalId);//stops the setInterval
+      
+
+    </script>
+  </body>
+</html>

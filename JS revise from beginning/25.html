@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai aur code</h1>
+    <button id="Start">Start</button>
+    <button id="Stop">Stop</button>
+
+    <script>
+      let intervalId; // to store the setInterval reference
+
+      const sayDate = function (str) {
+        console.log(str, new Date().toLocaleString());
+      };
+
+      document.getElementById("Start").addEventListener("click", function () {
+        if (!intervalId) {
+          intervalId = setInterval(sayDate, 1000, "hi");
+          console.log("Started");
+        }
+      });
+
+      document.getElementById("Stop").addEventListener("click", function () {
+        clearInterval(intervalId);
+        intervalId = null;
+        console.log("Stopped");
+      });
+    </script>
+  </body>
+</html>

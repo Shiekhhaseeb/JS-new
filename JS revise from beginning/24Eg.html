@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai aur code</h1>
+    <button id="Start">Stop</button>
+    <button id="Stop">Stop</button>
+
+    <script>
+      setInterval(() => {
+        console.log("Haseeb", Date.now());
+      }, 1000);
+      //using the var, passed ref.
+      const sayDate = function (str) {//string
+  console.log(str, new Date().toLocaleString());      };
+
+      setInterval(sayDate, 1000, "hi");
+    </script>
+  </body>
+</html>

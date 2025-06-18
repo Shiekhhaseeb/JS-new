@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const requestUrl ="https://api.github.com/users/Shiekhhaseeb"
+        // 1. Pehle object banao
+        const xhr =new XMLHttpRequest();
+        // 2. Open karo request (GET/POST + URL)
+        xhr.open("GET",requestUrl);
+        console.log("HERE");
+        console.log(xhr.readyState);
+        // 3. Call karo → send()
+        xhr.send();
+        // 4. Dekho jab data aaye toh kya karna hai
+
+        
+        
+    </script>
+</body>
+</html>

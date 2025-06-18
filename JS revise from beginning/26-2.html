@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1. Pehle object banao
+const xhr = new XMLHttpRequest();
+
+// 2. Open karo request (GET/POST + URL)
+xhr.open("GET", "https://api.example.com");
+
+// 3. Call karo → send()
+xhr.send();
+
+// 4. Dekho jab data aaye toh kya karna hai
+xhr.onreadystatechange = function () {
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    console.log("Mila Data:", xhr.responseText);
+  }
+};
+
+  </script>
+</body>
+</html>
